@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- style file -->
+    <link rel = "stylesheet" href = "../../stylesheet/index.css">
+
+    <title>Check In</title>
+
+</head>
+
+<body>
+
+    <!-- Title -->
+    <div class="headImage">
+        <img src = "../../assets/unify_logo.png" alt = "unify_logo">
+        <h1> Check in </h1>
+    </div>
+
+
+    <!-- check in input box and button -->
+    <div class="input-container" id="input-ticket">
+        <div class = field-input-container>
+            <input type="text" class="input-box" placeholder="Book Reference" id="check-bookref">
+            <input type = "number" class= "input-box" placeholder = "passenger ID" id = "check-id"> 
+            <button class="nav-btn" type="button" onclick="verifyBooking()">Look Up </button>
+        </div>
+    </div>
+    <!-- end of insert form -->
+
+    <!-- Dynamic table to display contact info-->
+    <div id = "contactInfo-display" style = "display: none;">
+        <table class="table mt-5 text-center">
+            <thead>
+                <tr>
+    
+                    <th class = "Ttitle">Contact Name </th>
+                    <th class = "Ttitle">Contact Phone </th>
+                    <th class = "Ttitle">Contact email</th>
+        
+                </tr>
+            </thead>
+            <tbody id="contact-info">
+            </tbody>
+        </table>
+    </div>
+    <!-- Dynamic Table to display flight info -->
+    <div id = "flightInfo-display" style = "Display:none;">
+        <table class="table mt-5 text-center">
+            <thead>
+                <tr>
+    
+                    <th class = "Ttitle">Flight ID </th>
+                    <th class = "Ttitle">Departure Airport </th>
+                    <th class = "Ttitle">Departure Time</th>
+                    <th class = "Ttitle">Arrival Airport</th>              
+                    <th class = "Ttitle">Arrival Time</th>
+                    <th class = "Ttitle">Flight Status</th>
+                </tr>
+            </thead>
+            <tbody id="flight-info">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- dynamic table to display boarding pass -->
+    <div id = "bpass-display"  style = "Display:none;">
+        <table class="table mt-5 text-center">
+            <thead>
+                <tr>
+    
+                    <th class = "Ttitle">Passenger Name </th>
+                    <th class = "Ttitle">Passenger ID </th>
+                    <th class = "Ttitle">Passenger DOB</th>              
+                    <th class = "Ttitle">Seat Number</th>
+                    <th class = "Ttitle">Checked Bags</th>
+                    <th class = "Ttitle">Meal Choice</th>
+                </tr>
+            </thead>
+            <!-- add boarding pass info in tbody by modying the HTML in main.js -->
+            <tbody id="boarding-pass">
+            </tbody>
+        </table>
+     
+        <button class = "nav-btn" onclick="check_in()" > CHECK IN </button>
+    
+    </div>
+
+
+    <!-- End of dynamic table -->
+
+    <!-- table to display error message -->
+    <table class="error-message" id="error-display" style="display:none;">
+        <thead>
+            <tr>
+                <th>Error: Invalid information, please try again.</th>
+            </tr>
+        </thead>
+    </table>
+    <!-- End of dynamic table -->
+    <!-- end of model -->
+    <div class = "nav-container">
+        <button class = "nav-btn" onclick = "location.href = '../index.html'"> Home</button>
+    </div>
+
+</body>
+
+<script src="check.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
