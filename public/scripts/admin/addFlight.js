@@ -1,5 +1,5 @@
 const port = 1385;
-const hostHttp = `http://localhost:${port}`;
+const hostHttp = `http://143.198.141.21:${port}`;
 let aircrafts = [];
 let airports = [];
 let flight = {};

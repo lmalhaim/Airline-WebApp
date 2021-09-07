@@ -26,7 +26,7 @@ const setBookInfo = (data) => {
 
 
 const port = 1385; 
-const hostHttp = `http://localhost:${port}`; 
+const hostHttp = `http://143.198.141.21:${port}`; 
 
 
 //verify that passenger and bookref are in db 

@@ -3,7 +3,7 @@ const tick_price = 700;
 const tax = 6.25/100; 
 const discounts = 0; 
 const port = 1385; 
-const hostHttp = `http://localhost:${port}`;
+const hostHttp = `http://143.198.141.21:${port}`;
 
 
 let passgs; 
