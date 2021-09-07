@@ -1,0 +1,75 @@
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking</title>
+        <link rel = "stylesheet" href = "../../../stylesheets/index.css">
+    </head>
+    <body onload="setCountries()">
+      <div class="headImage">
+        <img src = "../../../assets/unify_logo.png" alt = "unify_logo">
+      </div>
+      
+
+        <!---Browse Flights-->
+        <div class = "container"> 
+          <div class = "search-box">
+            <div class = "select-box">
+              <div class = "options-container" id = "o-options-container" >
+              </div>
+              <div class = "selected" id = "o-selected">
+                Origin
+              </div>
+            </div>
+
+            <div class = "select-box">
+              <label  class = "date-label" for="d_date"> Departure Date </label>
+              <input class = "input-box" type = "date" placeholder = "mm-dd-yyyy" id = "d_date" >
+            </div>
+
+
+            <div class = "select-box">
+              <div class = "options-container" id = "d-options-container">
+              </div>
+              <div class = "selected"  id = "d-selected">
+                Destination
+              </div>
+            </div>
+
+            <div class = "select-box">
+              <label class = "date-label"for="a_date"> Arrival Date </label>
+              <input class = "input-box" type = "date" placeholder = "mm-dd-yyyy" id = "a_date" >
+            </div>
+            <div class = "select-box">
+              <input class = "input-box" type = "number" placeholder="No Tickets" id = "s_no_ticket" >
+            </div>
+            <div class= "select-box">
+              <button class="btn-book-search" type="button" onclick="search()">Search</button>
+            </div>
+
+          </div>
+          <div class="search-box">
+            <h3> Browse Available Flights </h3>
+            <input class = "input-box" type = "number" placeholder="No Tickets" id = "b_no_ticket" >
+            <button class="btn-book-search" type="button" onclick="browse()">Browse</button>
+          </div>
+        </div>
+
+
+
+        <div class = "container2">
+          <table class = "flight_t" id="flights-list">
+            <!-- add todos in tbody by modying the HTML in main.js -->
+            <tbody id="flights-table">
+            </tbody>
+          </table>
+        </div>  
+        <div class = "nav-container">
+          <button class = "nav-btn" onclick = "location.href = '/'"> Home</button>
+        </div>
+        
+    </body>
+
+  <script src="../../scripts/index/search.js"></script>
+
+</html>

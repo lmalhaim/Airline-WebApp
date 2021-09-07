@@ -1,0 +1,90 @@
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>costumer information</title>
+        <link rel = "stylesheet" href = "../../stylesheets/index.css">   
+     </head>
+    <body onload = cost_onload()>
+        <div class="headImage">
+            <img src = "../../assets/unify_logo.png" alt = "unify_logo">
+            <h1>Passenger Information </h1>
+        </div>
+        <div class = "flight-container">
+
+        </div>
+        <div class = "input-container">
+            <label  class = "input-title" for="travel-docs"> Travel Documents</label>
+            <div class = "field-input-container" id = "travel-docs">
+                
+            </div>
+
+            <label  class = "input-title" for="contact"> Contact </label>
+            <div class = "field-input-container" id = "contact">
+                <input class = "input-box" type = "text" placeholder="Full Name" id = "cont-name">
+                 <input class = "input-box" type = "number" placeholder="Phone Number" id = "cont-num">
+                <input class = "input-box"  type = "email" placeholder = "Email" id = "cont-email" > 
+                
+            </div>
+            <label  class = "input-title" for="pay-container"> Payment</label>
+            <div class = "pay-text">
+                <br> <label class = "pay-title" for=  ".price-table">Review Payment</label><br> 
+                <table class = "price-table">
+                    <tr>
+                        <th> 
+                            Price per person
+                        </th>
+                        <td id = "price_pc"> 
+                            + $${tick_price}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th> 
+                            Tax (6.25%)
+                        </th>
+                        <td id = "tax"> 
+                            + $${tax}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th> 
+                            Discounts
+                        </th>
+                        <td id = "discount"> 
+                            - $${discount}
+                        </td>
+                    </tr>
+                    <tr  >
+                        <th class = "total-title"> 
+                            Total price 
+                        </th>
+                        <td id = "total"> 
+                            = $${total_price}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class = "field-input-container" id = "pay-container">
+                <div class = "btm">
+                    <input class = "input-box" type = "text" placeholder=" Name On Card" id = "card-name">
+                    <input class = "input-box" type = "number" placeholder="Card Number" id = "card-num">
+                    <label class = "date-label" for="card-exp">Expiration Date</label>
+                    <input class = "input-box"  type = "date" placeholder = "mm-dd-yyyy" id = "card-exp" > 
+                </div>
+                
+            </div>
+
+        </div>
+       
+           
+            
+
+        <div class = "nav-container">
+            <button class = "nav-btn" onclick = "location.href = 'searchFlight'"> Previous </button>
+            <button id = "rev-btn" class = "nav-btn" onclick = review()> Submit </button>
+        </div>
+        <div id = "loader"></div>
+    </body>
+    <script src="../../scripts/index/book.js"></script>
+</html>
