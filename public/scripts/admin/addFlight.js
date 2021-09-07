@@ -162,12 +162,6 @@ function insertFlightHandler() {
 
   //verify that all inputs are given
   let verification = true;
-  alert(isEqual(flight_id.length, 0) +
-  isEqual(scheduled_dep, "Invalid Date") +
-  isEqual(scheduled_arr, "Invalid Date") +
-  isEqual(seats_avail.length, 0) +
-  isEqual(dep_gate.length, 0) +
-  isEqual(bag_claim.length, 0));
   if (
     isEqual(flight_id.length, 0) ||
     isEqual(scheduled_dep, "Invalid Date") ||
