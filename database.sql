@@ -317,14 +317,14 @@ CREATE TABLE seat_class(seat_no CHAR(2), fare_condition Text, PRIMARY KEY(seat_n
 
 
 INSERT INTO seat_class VALUES
-    ('1A', 'Business'), 
-    ('1B', 'Business'), 
-    ('1C', 'Business'), 
-    ('1D', 'Business'), 
-    ('2A', 'Business'), 
-    ('2B', 'Business'), 
-    ('2C', 'Business'), 
-    ('2D', 'Business'), 
+    ('1A', 'Economy'), 
+    ('1B', 'Economy'), 
+    ('1C', 'Economy'), 
+    ('1D', 'Economy'), 
+    ('2A', 'Economy'), 
+    ('2B', 'Economy'), 
+    ('2C', 'Economy'), 
+    ('2D', 'Economy'), 
     ('3A', 'Economy'), 
     ('3B', 'Economy'), 
     ('3C', 'Economy'), 

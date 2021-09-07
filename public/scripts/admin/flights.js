@@ -2,7 +2,9 @@ let list_flights = []
 let list_passengers = []
 selectFlights();
 const port = 1385; 
-const hostHttp = `http://143.198.141.21:${port}`
+const localHost = 'localhost'; 
+const http = '143.198.141.21'; 
+const hostHttp = `http://${localHost}:${port}`;
 const setFlights = (data) => {
     list_flights = data;
 }

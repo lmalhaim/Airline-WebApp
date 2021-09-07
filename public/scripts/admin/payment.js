@@ -3,7 +3,9 @@ const tick_price = 700;
 const tax = 6.25/100; 
 let discounts = 0; 
 const port = 1385; 
-const hostHttp = `http://143.198.141.21:${port}`
+const localHost = 'localhost'; 
+const http = '143.198.141.21'; 
+const hostHttp = `http://${localHost}:${port}`;
 const setPayment = (data) => {
     payment = data;
 }

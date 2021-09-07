@@ -12,7 +12,9 @@ let passgs;
 let payment = {}; 
 let contact = {}; 
 const port = 1385; 
-const hostHttp = `http://143.198.141.21:${port}`;
+const localHost = 'localhost'; 
+const http = '143.198.141.21'; 
+const hostHttp = `http://${localHost}:${port}`;
 
 const set_no_ticket = (data) => {
   localStorage.setItem("no_ticket", JSON.stringify(data));

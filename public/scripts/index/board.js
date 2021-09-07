@@ -3,8 +3,9 @@ let passengers;
 let bookInfo;
 let boardInfo;
 
-
-const hostHttp = `http://143.198.141.21:${port}`; 
+const localHost = 'localhost'; 
+const http = '143.198.141.21'; 
+const hostHttp = `http://${localHost}:${port}`;
 
 
 const setPassengers = (data) => {

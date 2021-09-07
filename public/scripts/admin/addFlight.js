@@ -1,5 +1,7 @@
 const port = 1385;
-const hostHttp = `http://143.198.141.21:${port}`;
+const localHost = 'localhost'; 
+const http = '143.198.141.21'; 
+const hostHttp = `http://${localHost}:${port}`;
 let aircrafts = [];
 let airports = [];
 let flight = {};
@@ -160,7 +162,12 @@ function insertFlightHandler() {
 
   //verify that all inputs are given
   let verification = true;
-
+  alert(isEqual(flight_id.length, 0) +
+  isEqual(scheduled_dep, "Invalid Date") +
+  isEqual(scheduled_arr, "Invalid Date") +
+  isEqual(seats_avail.length, 0) +
+  isEqual(dep_gate.length, 0) +
+  isEqual(bag_claim.length, 0));
   if (
     isEqual(flight_id.length, 0) ||
     isEqual(scheduled_dep, "Invalid Date") ||
@@ -174,9 +181,14 @@ function insertFlightHandler() {
   } else {
     //check further restrictions
     //flight_id must be 6 characters
+    
+    if(seats_avail > 32){
+      verification = false; 
+      alert("Error: All of our aircrafts support maximum 32 seats. Available seats must be 32 or less"); 
+    }
     if (flight_id.length != 6) {
       verification = false;
-      alert("flight ID must be 6 characters long");
+      alert("Error: flight ID must be 6 characters long");
     }
     //departure > today's date
     if (!verifyScheduled(scheduled_dep, new Date())) {

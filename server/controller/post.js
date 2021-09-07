@@ -191,6 +191,7 @@ module.exports = {
                     ]);
                 })
                 .then(async (res) => {
+                    console.log('1'); 
                     res = await pool.query(transactions.queryInsertFlightBoard, [
                     flight.flight_id,
                     flight.scheduled_boarding,
@@ -199,7 +200,23 @@ module.exports = {
                     ]);
                 })
                 .then(async (res) => {
-                    await populate_seats(flight);
+
+                    //HERE
+                    let noSeats = await pool.query(query.getNumSeats, [flight.flight_id]);
+                    noSeats = Number(noSeats.rows[0].seats_available);
+                    const getSeats = await pool.query(query.getAllSeats);
+                    let insertSeat = "";
+                    let index = 0; 
+                    for(seat of getSeats.rows){
+                        if(index < noSeats){
+                            insertSeat = await pool.query(query.insertSeat, [
+                                flight.flight_id,
+                                `${seat.seat_no}`,
+                            ]);
+                            index += 1; 
+                        }
+                    }
+                    //await populate_seats(flight);
                 })
                 .then((res) => {
                     console.log("commited");
