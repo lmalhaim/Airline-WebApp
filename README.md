@@ -72,18 +72,14 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install 
   ```
-* node
+* nodeJS
   ```sh
   npm i node
-  ```
-* psql
-  ```sh
-  apt install postgresql postgresql-contrib
   ```
 
 ### Installation
 
-1. install prerequisites to machine 
+1. Install prerequisites to machine 
 2. Clone the repo
    ```sh
    git clone https://github.com/lmalhaim/airline-webapp
