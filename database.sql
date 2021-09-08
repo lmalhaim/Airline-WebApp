@@ -67,18 +67,11 @@ CREATE TABLE flights (
     CONSTRAINT flights_arrival_airport_fkey FOREIGN KEY (arrival_airport) REFERENCES airport(airport_code) ON DELETE CASCADE,
     CONSTRAINT flights_departure_airport_fkey FOREIGN KEY (departure_airport) REFERENCES airport(airport_code) ON DELETE CASCADE,
     CONSTRAINT flights_check CHECK ((scheduled_arrival > scheduled_departure)),
-    /*
-     CONSTRAINT flights_check1 CHECK (
-         (
-             (actual_arrival IS NULL)
-             OR (
-                 (actual_departure IS NOT NULL)
-                 AND (actual_arrival IS NOT NULL)
-                 AND (actual_arrival > actual_departure)
-             )
-         )
-     ),
-     */
+    CONSTRAINT seats_available_check CHECK (
+        (
+            seats_available > -1
+        )
+    ),
     CONSTRAINT flights_status_check CHECK (
         (
             (STATUS)::text = ANY (
@@ -102,7 +95,7 @@ CREATE TABLE bookings (
     contact_email text NOT NULL,
     STATUS character varying(10) NOT NULL,
     CONSTRAINT verify_status CHECK(STATUS = 'Active' OR STATUS = 'Inactive'), 
-    CONSTRAINT flight_id_fkey FOREIGN KEY (flight_id) REFERENCES flights(flight_id) ON DELETE CASCADE 
+    CONSTRAINT flight_id_fkey FOREIGN KEY (flight_id) REFERENCES flights(flight_id) ON DELETE CASCADE
 );
 
 

@@ -22,7 +22,10 @@
             <label  class = "input-title" for="contact"> Contact </label>
             <div class = "field-input-container" id = "contact">
                 <input class = "input-box" type = "text" placeholder="Full Name" id = "cont-name">
-                 <input class = "input-box" type = "number" placeholder="Phone Number" id = "cont-num">
+                <div class = "input-bubble">
+                    <input class = "input-box" type = "number" placeholder="Phone Number" id = "cont-num">
+                    <span class = "input-comment"> *Must be 10 digits</span>
+                </div>
                 <input class = "input-box"  type = "email" placeholder = "Email" id = "cont-email" > 
                 
             </div>
@@ -68,7 +71,10 @@
             <div class = "field-input-container" id = "pay-container">
                 <div class = "btm">
                     <input class = "input-box" type = "text" placeholder=" Name On Card" id = "card-name">
-                    <input class = "input-box" type = "number" placeholder="Card Number" id = "card-num">
+                    <div class = "input-bubble">
+                        <input class = "input-box" type = "number" placeholder="Card Number" id = "card-num">
+                        <span class = "input-comment"> *Must be between 8 and 12 digits</span>
+                    </div>
                     <label class = "date-label" for="card-exp">Expiration Date</label>
                     <input class = "input-box"  type = "date" placeholder = "mm-dd-yyyy" id = "card-exp" > 
                 </div>

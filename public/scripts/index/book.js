@@ -120,7 +120,11 @@ function cost_onload() {
         </div>
       
         <div class = "btm">
-          <input class = "input-box" type = "text" placeholder="Identification Number" id = "id-num">
+          <div class = "input-bubble">
+            <input class = "input-box" type = "text" placeholder="Identification Number" id = "id-num">
+            <span class = "input-comment"> *Must be between 8 and 10 digits</span>
+            <span class = "input-comment"> *Memorize as it will be needed for check in</span>
+          </div>
           <input class = "input-box" type = "text" placeholder="Country of Issue" id = "nationality">
           <label class = "date-label" for="id-exp">Expiration Date</label>
           <input class = "input-box"  type = "date" placeholder = "mm-dd-yyyy" id = "id-exp" > 

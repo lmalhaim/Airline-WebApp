@@ -237,6 +237,17 @@ display: none;
 }
 
 
+.input-bubble{
+    display: inline-flex; 
+    flex-direction: column;
+}
+.input-comment {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #5e1414; 
+}
+
+
 .nav-container {
     display: flex;
     justify-content: center;
