@@ -84,7 +84,6 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 1. install prerequisites to machine 
-#Install db and run db file 
 2. Clone the repo
    ```sh
    git clone https://github.com/lmalhaim/airline-webapp
@@ -93,11 +92,11 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-4. start server
+4. Start server
    ```sh
    npm start
    ```
-
+5. Go to localhost url [http://localhost:1385](http://localhost:1385)
 
 <!-- CONTACT -->
 ## Contact
