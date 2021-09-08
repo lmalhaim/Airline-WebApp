@@ -14,7 +14,7 @@ let contact = {};
 const port = 1385; 
 const localHost = 'localhost'; 
 const http = '143.198.141.21'; 
-const hostHttp = `http://${http}:${port}`;
+const hostHttp = `http://${localHost}:${port}`;
 
 const set_no_ticket = (data) => {
   localStorage.setItem("no_ticket", JSON.stringify(data));

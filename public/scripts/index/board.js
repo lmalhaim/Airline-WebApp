@@ -5,7 +5,7 @@ let boardInfo;
 
 const localHost = 'localhost'; 
 const http = '143.198.141.21'; 
-const hostHttp = `http://${http}:${port}`;
+const hostHttp = `http://${localHost}:${port}`;
 
 
 const setPassengers = (data) => {
