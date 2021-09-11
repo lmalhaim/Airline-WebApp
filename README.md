@@ -82,7 +82,7 @@ This is an example of how to list things you need to use the software and how to
 1. Install prerequisites to machine 
 2. Clone the repo
    ```sh
-   git clone https://github.com/lmalhaim/airline-webapp
+   git clone https://github.com/lmalhaim/Airline_web_app
    ```
 3. Install NPM packages
    ```sh
@@ -99,5 +99,5 @@ This is an example of how to list things you need to use the software and how to
 
 Lynn Alhaimy - leen.alhaimy@gmail.com
 
-Project Link: [https://github.com/lmalhaim/airline-webapp](https://github.com/lmalhaim/airline-webapp)
+Project Link: [https://github.com/lmalhaim/Airline_web_app](https://github.com/lmalhaim/Airline_web_app)
 
